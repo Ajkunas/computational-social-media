@@ -1,9 +1,23 @@
-# Project for the Computational Social Media course
+# Sentiment analysis on ChatGPT tweets
 
 Team :
 - Barbara Ruvolo (barbara.ruvolo@epfl.ch)
 - Ajkuna Seipi (ajkuna.seipi@epfl.ch) 
 - Hongyi Shi (hongyi.shi@epfl.ch) 
+
+## Datasets 
+
+ChatGPT is a converastional artificial intelligence released since November 2022. 
+On twitter, and on social media in general, the topic was and still is viral. 
+
+Eventhough, the concept is revolutionary, it still raises multiple questions about ethic, privacy and security.
+Thus, we will analyse the impact of the emergence of AI on the population, based on ChatGPT tweets. 
+
+To do so, we will use some datasets from Kaggle. 
+* https://www.kaggle.com/datasets/konradb/chatgpt-the-tweets
+* https://www.kaggle.com/datasets/charunisa/chatgpt-sentiment-analysis
+* https://www.kaggle.com/datasets/pcminh0505/chatgpt-twitter
+
 
 ## Data preprocessing 
 
@@ -27,7 +41,7 @@ To train text, we need to vectorize them and give them a mathematical meaning. T
 
 ## Training 
 
-To select the best model with the best achievable accuracy, we compare different models: 
+To select the best model with the best achievable accuracy and F1 score, we compare different models: 
 * Logistic Regression 
 * SVM 
 * Random Forest
