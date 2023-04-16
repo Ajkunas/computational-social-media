@@ -30,8 +30,7 @@ To train text, we need to vectorize them and give them a mathematical meaning. T
 To select the best model with the best achievable accuracy, we compare different models: 
 * Logistic Regression 
 * SVM 
-* Random Forest 
-* KNN 
+* Random Forest
 * CNN 
 
 You can find the notebooks in the following drive for further training: 
