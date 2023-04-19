@@ -1,6 +1,7 @@
 import requests
 import os
 import json
+import pandas as pd
 
 # To set your enviornment variables in your terminal run the following line:
 bearer_token = 'AAAAAAAAAAAAAAAAAAAAAPYUVQEAAAAA2gS99BYCk2EB8DGq9w68SdWqux0%3DyDEVUib347dkVmH18WESS7ZPUGsql6JuZZYJ7UMdVFqHKhQ6n7'
@@ -50,9 +51,12 @@ def delete_all_rules(rules):
 
 def set_rules(delete):
     # You can adjust the rules if needed
+    #sample_rules = [
+     #   {"value": "dog has:images", "tag": "dog pictures"},
+    #    {"value": "cat has:images -grumpy", "tag": "cat pictures"},
+    #]
     sample_rules = [
-        {"value": "dog has:images", "tag": "dog pictures"},
-        {"value": "cat has:images -grumpy", "tag": "cat pictures"},
+        {"value": "(chatGPT OR AI OR ai OR chatgpt) from:elonmusk lang:en -is:retweet", "tag": "chatgpt tweets"}
     ]
     payload = {"add": sample_rules}
     response = requests.post(
@@ -68,6 +72,9 @@ def set_rules(delete):
 
 
 def get_stream(set):
+    set_id = []
+    set_text = []
+    nb = 0
     response = requests.get(
         "https://api.twitter.com/2/tweets/search/stream", auth=bearer_oauth, stream=True,
     )
@@ -81,7 +88,17 @@ def get_stream(set):
     for response_line in response.iter_lines():
         if response_line:
             json_response = json.loads(response_line)
+            set_id.append(json_response['data']['id'])
+            set_text.append(json_response['data']['text'])
+            nb += 1
             print(json.dumps(json_response, indent=4, sort_keys=True))
+            
+        if (nb == 10): 
+            break
+            
+    data = {'id': set_id, 'text': set_text}
+    df = pd.DataFrame(data)
+    df.to_csv('response_test.csv')
 
 
 def main():
