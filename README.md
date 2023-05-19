@@ -54,6 +54,7 @@ In the root of the project:
 * `data_training.ipynb` : simulation of different models to select the best one. 
 * `training.ipynb` : training of the labeled dataset with the best model, saving the pre-trained model. 
 * `predict.ipynb` : sentiment analysis (prediction of the labels) of the pre-processed datasets. 
+* `sample_user_descr.csv` : sample of user description labeled with 1 or 0, where 1 indicates it is a scientist/researcher.
 * `scientists_analysis.ipynb` : classifier to predict if the user is a scientist/researcher or not. Model trained and labeled predicted.
 
 Inside the `datasets/` folder:
