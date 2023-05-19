@@ -54,16 +54,19 @@ In the root of the project:
 * `data_training.ipynb` : simulation of different models to select the best one. 
 * `training.ipynb` : training of the labeled dataset with the best model, saving the pre-trained model. 
 * `predict.ipynb` : sentiment analysis (prediction of the labels) of the pre-processed datasets. 
+* `scientists_analysis.ipynb` : classifier to predict if the user is a scientist/researcher or not. Model trained and labeled predicted.
 
 Inside the `datasets/` folder:
 
 * `chatgptfirst.csv` : dataset containing the tweets of the first month of launch. 
 * `sentiment.csv` : dataset containing the labeled tweets used for training.
-* `preprocessed_sentiment.csv` : preprocessed labeled tweets. 
+* `preprocessed_sentiment.csv` : preprocessed labeled tweets.
 * `preprocessed_chatgptfirst.csv` : preprocessed first month of launch tweets.
-* `preprocessed_chatgpt2last.csv` : preprocessed two last months of tweets (march and april). 
-* `sentiment_chatgptfirst.csv` : predicted first month of launch tweets.
-* `sentiment_chatgpt2last.csv` : predicted two last months of tweets (march and april). 
+* `preprocessed_chatgpt2last.csv` : preprocessed two last months of tweets (march and april).
+* `sentiment_chatgptfirst.csv` : sentiment prediction of first month of launch tweets.
+* `sentiment_chatgpt2last.csv` : sentiment prediction of two last months of tweets (march and april). 
+* `sample_user_descr.csv` : sample of 200 users description labeled with 1 and 0, where 1 means the user is a scientist/researcher and 0 means they are not.
+* `sentiment_scientists.csv` : sentiment prediction of the tweets of only scientists/researcher. 
 
 **Note** : the dataset used to extract the two months of tweets was not pushed into github because of the size of the file. It should be put locally in the repo for further use. 
 
