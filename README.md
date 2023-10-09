@@ -1,5 +1,7 @@
 # Sentiment analysis on ChatGPT tweets
 
+[Link to the report](./report.pdf)
+
 Team :
 - Barbara Ruvolo (barbara.ruvolo@epfl.ch)
 - Ajkuna Seipi (ajkuna.seipi@epfl.ch) 
